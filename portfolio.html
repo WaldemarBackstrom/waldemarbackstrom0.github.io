@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html lang="sv">
+	<head>
+		<link rel="stylesheet" href="mall.css">
+		<meta charset="utf-8"/>
+		<title>Plaske</title>
+	</head>
+	
+	<body class="bgpic">
+		<a class="pfpcircle" href="index.html"></a>
+		<div class="topnavbox" >
+			<ul class="topnav">
+				<li><a class="active" href="portfolio.html">Portfolio</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><a href="aboutme.html">About Me</a></li>
+			</ul>
+		</div>
+		<div class="topnamebox">
+			<h1>Waldemars'</h1>
+			<h1>Portfolio</h1>
+		</div>
+		<div class="maincontent">
+			<div class="slideshowcontainer">
+				<div class="mySlides fade">
+					<img src="bilder/plaskepng.png" alt="Contentaware-scale frog" style="width:150%">
+				</div>
+				<div class="mySlides fade">
+					<img src="bilder/hylla.png" alt="CAD shelf" style="width:150%">
+				</div>
+				<div class="mySlides fade">
+					<img src="bilder/braljusstake.png" alt="CAD candelabra" style="width:150%">
+				</div>
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+				<div style="text-align:center" class="slideshowdots">
+					<span class="dot" onclick="currentSlide(1)"></span>
+					<span class="dot" onclick="currentSlide(2)"></span>
+					<span class="dot" onclick="currentSlide(3)"></span>
+				</div>
+			</div>
+			<div class="maincontenttext">
+				<p class="portfoliotext">Low poly, low effort:</p>
+				<img class="myrbild" alt="Low poly alt" src="bilder/myra shaded.JPG">
+				<img class="legendblade" alt="Low poly sword" src="bilder/LEGEND BLADE.JPG">
+			</div>
+		</div>
+		<script>
+			let slideIndex = 1;
+			showSlides(slideIndex);
+
+			// Next/previous controls
+			function plusSlides(n) {
+			  showSlides(slideIndex += n);
+			}
+
+			// Thumbnail image controls
+			function currentSlide(n) {
+			  showSlides(slideIndex = n);
+			}
+
+			function showSlides(n) {
+			  let i;
+			  let slides = document.getElementsByClassName("mySlides");
+			  let dots = document.getElementsByClassName("dot");
+			  if (n > slides.length) {slideIndex = 1}
+			  if (n < 1) {slideIndex = slides.length}
+			  for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			  }
+			  for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			  }
+			  slides[slideIndex-1].style.display = "block";
+			  dots[slideIndex-1].className += " active";
+			}
+		</script>
+	</body>
+
+</html>

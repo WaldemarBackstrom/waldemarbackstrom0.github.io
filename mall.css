@@ -1,0 +1,429 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+.bgpic{
+	background-image: url("bilder/swampblur.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	z-index: -90;
+}
+
+.pfpcircle{
+	height: 230px;
+	width: 230px;
+	border-radius: 50%;
+	background: #c2bc70;
+	display: inline-block;
+	background-image: url('bilder/plaskepng.png');
+	background-repeat: no-repeat;
+	background-size: 85%;
+	background-position: 160% 90%;
+	position: fixed;
+	top:-80px;
+	left:-70px;
+	z-index: 1;
+	border: 7px solid #8f8228;
+	transition: all 0.3s;
+}
+
+.pfpcircle:hover{
+	transform: scale(1.15);
+}
+
+.topnavbox{
+	background-color: #b6a564;
+	height: 101px;
+	z-index: 2;
+	display: flex;
+	align-items: center;
+	width: 50%;
+	position: relative;
+	float: right;
+	margin: 0;
+	padding: 0;
+	border-bottom: 5px solid #8f8228;
+}
+
+.topnav{
+	display: flex;
+	justify-content: space-evenly;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	z-index: 3;
+}
+
+.topnav li{
+	z-index: -1;	
+	transition: all 0.3s;
+	white-space: nowrap;
+}
+
+.topnav li a{
+	padding-bottom: 35px;
+	border-bottom: 5px solid #8f8228;
+	padding-left: 10px;
+	padding-right: 10px;
+	background: #b6a564;
+	z-index: 2;
+	transition: all 0.15s ease-in;
+
+}
+
+.topnav li:hover{
+	transform:translateY(20px);
+}
+
+.topnav li a:hover{
+	background-color: #a89e59;
+	padding-top: 55px;
+}
+
+.topnamebox{
+	background-image: linear-gradient(to left,#b6a564,#a89e59);
+	z-index: -1;
+	display: flex;
+	height: 101px;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	font-size: 130%;
+	border-bottom: 5px solid #8f8228;
+	width: 50%;
+}
+
+.maincontent{
+	background-image: linear-gradient(rgba(194, 188, 112.94), #8f8228);
+	margin: 30px;
+	height: 570px;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	border: 7px solid #8f8228;
+	border-radius: 3%;
+	z-index: -1;
+}
+
+.maincontenttext{
+	width: 50%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: space-around;
+	text-align: justify;
+	margin-top: -80px;
+}
+
+.pfpstart{
+	width: 80%;
+}
+
+.startname {
+	display:flex;
+	flex-wrap: nowrap;
+	whitespace: nowrap;
+	font-size: 220%;
+	text-decoration: underline;
+	text-underline-offset: 1.2rem;
+}
+
+.starttitles {
+	font-size: 150%;
+	margin-bottom: 4rem;
+}
+
+.startpfpbox {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 30%;
+	height: 35%;
+	border-radius: 50%;
+	margin-right: 100px;
+}
+
+.startpfpbox img {
+	transition: all 0.6s ease-in;
+}
+
+
+.startpfpbox:hover img {
+	transform: translateY(-30px) rotate3d(0,1,1,1440deg);
+}
+
+.myrbild{
+	max-width: 30%;
+	max-height: 30%;
+	border-radius: 4%;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	box-shadow: #8f8228 4px 4px 0px 2px;
+}
+
+.legendblade{
+	max-width: 20%;
+	max-height: 20%;
+	border-radius: 4%;
+	box-shadow: #8f8228 4px 4px 0px 2px;
+	margin-top: 20px;
+}
+
+.slideshowcontainer{
+	max-width: 1000px;
+	left: 4rem;
+	position: relative;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.mySlides{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: #8f8228 0px 0px 0px 5px;
+	padding: 2rem;
+	padding-right: 8.25rem;
+	background-color: #625732;
+	margin: auto;
+	border-radius: 4%;
+}
+
+.mySlides img {
+	object-fit: cover;
+	background-size: cover;
+	background-position: center;
+	height: 100%;
+	width: 100%;
+}
+
+.maincontent img {
+	transition: all 0.3s ease-in;
+	margin-top: 20px;
+}
+
+.maincontenttext img:hover {
+	transform: scale(1.40);
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: #e1c192;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  z-index: 0;
+}
+
+.next {
+  left: 101.5%;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev{
+  right: 101.5%;
+}
+
+.prev:hover, .next:hover {
+  background-color: #625732;
+}
+
+.dot {
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  min-width: 20px;
+  margin: 0 6px;
+  background-color: #e1c192;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.slideshowdots{
+	display: flex;
+	flex-direction: row;
+	margin-top: 1rem;
+}
+
+.active, .dot:hover {
+  background-color: #4b3929;
+}
+
+.contactimgs {
+	display: flex;
+	justify-content: center;
+	width: 40%;
+	margin-bottom: 4rem;
+}
+
+.contactimgs img {
+	transition: all 0.2s ease-in;
+}
+
+.contactimgs:hover .contactpropic{
+	transform:rotate(20deg) scale(1.2);
+}
+
+.contactimgs:hover .contactantpic {
+	transform:rotate(-10deg) scaleX(-1) scale(1.1);
+}
+
+.contactpropic {
+	width: 70%;
+	margin-right: 14rem;
+	margin-left: 5rem;
+	z-index: 1;
+	rotate: -20deg;
+}
+
+.contactantpic {
+	position: absolute;
+	max-height: 20%;
+	max-width: 20%;
+	margin-left: 8rem;
+	z-index: 0;
+	transform: scaleX(-1);
+	rotate: 10deg;
+}
+
+.contacts {
+	margin-top: 2rem;
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: center;
+	align-items: center;
+	font-size: 110%;
+}
+
+.aboutmetxt {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	text-align: justify;
+}
+
+.myinspiration{
+	color: blue;
+	text-decoration: underline;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+h1{
+	font-family: berlin sans fb;
+	color: #625732;
+	letter-spacing: 3px;
+	padding-left: 150px;
+}
+
+p{
+	font-family: berlin sans fb;
+	display: flex;
+	color: #625732;
+	z-index: 1;
+	font-size: 200%;
+	margin-top: 30px;
+}
+
+a{
+	font-family: berlin sans fb;
+	font-size: 180%;
+	text-decoration: none;
+	color: #625732;
+	z-index: 6;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+}
+
+@media screen and (max-width: 970px) {
+	h1{
+		font-size: 100%;
+	}
+	.maincontent{
+		height: 40rem;
+	}
+	.maincontenttext{
+		margin-right: 2rem;
+	}
+	p{
+		font-size: 110%;
+	}
+	.startname{
+		font-size: 120%;
+	}
+	.starttitles{
+		font-size: 100%;
+	}
+	.pfpstart{
+		margin-left: 2rem;
+	}
+	.pfpcircle{
+		width: 9rem;
+		height: 9rem;
+		top: -2rem;
+		left: -2rem;
+		background-size: 90%;
+	}
+	.topnav li a{
+		font-size: 100%;
+		padding-bottom: 2.65rem;
+	}
+	.topnav li a:hover{
+		padding-top: 4rem;
+	}
+	.topnav li{
+		width: 50%;
+	}
+	.slideshowcontainer{
+		width: 25rem;
+	}
+	.mySlides{
+		width: 30%;
+		padding-right: 5.5rem;
+	}
+	.dot{
+		width: 0.25rem;
+		height: 1.25rem;
+	}
+	.next{
+		left:85%;
+	}
+	.prev{
+		right:85%;
+	}
+	.contactimgs{
+		margin-left: 4rem;
+	}
+	.contactantpic{
+		margin-left: 3rem;
+	}
+	.contactpropic{
+		width: 60%;
+	}
+}
